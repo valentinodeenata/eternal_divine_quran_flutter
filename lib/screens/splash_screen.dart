@@ -1,4 +1,5 @@
 import 'package:eternal_divine_quran/globals.dart';
+import 'package:eternal_divine_quran/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -56,6 +57,10 @@ class SplashScreen extends StatelessWidget {
                     right: 0,
                     child: Center(
                       child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context) => HomeScreen(),));
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 40,
